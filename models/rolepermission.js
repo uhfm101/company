@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   permission_id: {
     type: DataTypes.INTEGER,
     primaryKey: true
-  }
+    }
   }, {
     sequelize,
     modelName: 'RolePermission',

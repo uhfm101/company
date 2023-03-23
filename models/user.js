@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.belongsToMany(models.Role, {
+      User.belongsTo(models.Role, {
         as: 'role',
         foreignKey: 'role_id'
       })
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
-    tableName: roles_users,
+    tableName: 'roles_users',
     timestamps: false
   });
   return User;
